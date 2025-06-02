@@ -102,12 +102,6 @@
         <p>La section Community est conçue pour s’adapter à tous types d’usages : passifs, expressifs, créatifs ou simplement curieux.</p>
     </section>
 
-    <section>
-        <h2>💬 Avis / Proposition</h2>
-        <label for="avis">Tu as une idée pour améliorer cette section ?</label>
-        <textarea id="avis" placeholder="Propose une amélioration, une réaction ou un avis..."></textarea>
-        <button onclick="envoyerFeedback()">Envoyer</button>
-    </section>
 </main>
 <section style="max-width: 900px; margin: 60px auto; padding: 40px;">
   <h2 style="text-align: center; color: #00796b; font-size: 28px; margin-bottom: 20px;">
@@ -122,17 +116,6 @@
   </script>
 </section>
 
-<script>
-    function envoyerFeedback() {
-        const texte = document.getElementById('avis').value;
-        if (texte.trim()) {
-            alert("Merci pour votre avis :\n" + texte);
-            document.getElementById('avis').value = "";
-        } else {
-            alert("Merci de saisir un avis avant d'envoyer.");
-        }
-    }
-</script>
 </body>
 </html>
 
