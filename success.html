@@ -112,25 +112,5 @@
       </script>
     </section>
 
-    
-    <section>
-        <h2>💬 Avis / Proposition</h2>
-        <label for="avis">Tu as une idée pour améliorer cette section ?</label>
-        <textarea id="avis" placeholder="Propose une amélioration, une réaction ou un avis..."></textarea>
-        <button onclick="envoyerFeedback()">Envoyer</button>
-    </section>
-</main>
-
-<script>
-    function envoyerFeedback() {
-        const texte = document.getElementById('avis').value;
-        if (texte.trim()) {
-            alert("Merci pour votre avis :\n" + texte);
-            document.getElementById('avis').value = "";
-        } else {
-            alert("Merci de saisir un avis avant d'envoyer.");
-        }
-    }
-</script>
 </body>
 </html>
