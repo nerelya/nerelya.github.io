@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Nerelya – Relié à l’essentiel</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #f0f4f8, #e0f7fa);
+            color: #2c3e50;
+        }
+        header {
+            background-color: #061d32;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        header img {
+            height: 80px;
+            margin-bottom: 10px;
+        }
+        header h1 {
+            font-size: 44px;
+            margin: 10px 0 5px;
+        }
+        header p {
+            font-size: 20px;
+            margin: 0;
+            font-style: italic;
+            color: #b2ebf2;
+        }
+        .sections {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px 20px;
+            flex-wrap: wrap;
+        }
+        .card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin: 20px;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card h2 {
+            margin-bottom: 15px;
+            color: #00796b;
+        }
+        .card p {
+            font-size: 15px;
+        }
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #00796b;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .button:hover {
+            background-color: #004d40;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="logo-nerelya.png" alt="Logo Nerelya">
+    <h1>Nerelya</h1>
+    <p>Le réseau social qui relie à soi, aux autres et à ses objectifs</p>
+</header>
+
+<section class="sections">
+    <div class="card">
+        <h2>Success</h2>
+        <p>Publie tes réussites, même les plus simples, pour gagner de la reconnaissance et motiver d'autres. Réactions, validations et reproduction de défis par la communauté = réputation.</p>
+        <a class="button" href="#">Voir plus</a>
+    </div>
+    <div class="card">
+        <h2>Community</h2>
+        <p>Partage ton quotidien, demande des avis, reçois de l’aide. Photos, vidéos, textes : exprime-toi librement dans un espace fluide et bienveillant.</p>
+        <a class="button" href="#">Voir plus</a>
+    </div>
+    <div class="card">
+        <h2>Challenges</h2>
+        <p>Relève des défis personnels ou collectifs. Fournis une preuve, évalue les réussites des autres, gagne des points selon la qualité et la reconnaissance de tes actions.</p>
+        <a class="button" href="#">Voir plus</a>
+    </div>
+</section>
+
+</body>
+</html>
