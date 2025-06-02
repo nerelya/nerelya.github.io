@@ -37,6 +37,18 @@
         h2 {
             color: #00796b;
         }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 6px;
+        }
+        code {
+            background-color: #eef2f3;
+            padding: 3px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
         textarea {
             width: 100%;
             height: 100px;
@@ -66,11 +78,26 @@
 <main>
     <section>
         <h2>🟢 Description détaillée</h2>
-        <p>
-            La section « Success » te permet de publier une réussite de ta journée : une progression, un exploit ou une action dont tu es fier.
-            Ta communauté peut réagir : encourager, valider ou même s’engager à reproduire ton action. En retour, tu gagnes des points de réputation.
-            Ce système favorise la reconnaissance positive et l’inspiration mutuelle. Chaque action a un impact.
-        </p>
+        <p>La section « Success » permet de partager ses réussites personnelles, petites ou grandes. L’utilisateur peut publier une action, un progrès ou un moment de fierté vécu dans sa journée. Chaque publication peut être accompagnée d’un texte, d’une photo ou d’un autre support simple.</p>
+
+        <p>La communauté peut ensuite réagir parmi 4 options :</p>
+        <ul>
+            <li><strong>Passer au suivant</strong> : aucun effet (0 point).</li>
+            <li><strong>L’encouragement</strong> : soutien léger (+1 point).</li>
+            <li><strong>La validation</strong> : soutien marqué et félicitations (+2 points).</li>
+            <li><strong>La reconnaissance</strong> : l'action inspire le visiteur à reproduire l'action (+2 points immédiats, puis +4 si le visiteur la réalise avec succès ; ce dernier gagne aussi +3 points).</li>
+        </ul>
+
+        <h3>📸 Preuve obligatoire si reproduction</h3>
+        <p>Pour éviter les abus, une preuve est exigée : photo, vidéo, certificat, capture d'écran... Celle-ci est ensuite évaluée par la communauté via un vote. En cas de doute, un système IA anti-fraude et une modération humaine peuvent intervenir.</p>
+
+        <h3>⚖️ Filtrage des micro-actions et adaptation du mérite</h3>
+        <p>Un questionnaire initial évalue les habitudes de l'utilisateur. Si une action est jugée triviale (ex. : faire son lit quand c’est déjà habituel), elle ne rapporte pas de points. Un message s’affichera :</p>
+        <blockquote><em>« Cette action ne fait pas partie de tes efforts déclarés. Elle ne générera pas de réputation, mais tu peux la partager librement. »</em></blockquote>
+
+        <p>Mais attention : pour certaines personnes, même une action simple peut être un immense effort. Le système reste donc <strong>adaptatif</strong>, bienveillant et personnalisable (désactivation possible des filtres si besoin).</p>
+
+        <p>En cas de trop grand nombre de publications simples, un tri automatique réduit leur visibilité pour les profils non concernés, tout en mettant en avant les vraies sorties de zone de confort.</p>
     </section>
 
     <section>
@@ -94,4 +121,3 @@
 </script>
 </body>
 </html>
-
