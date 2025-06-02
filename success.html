@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Nerelya – Section Success</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #f0f4f8, #e0f7fa);
+            color: #2c3e50;
+        }
+        header {
+            background-color: #061d32;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 44px;
+            margin: 10px 0 5px;
+        }
+        header p {
+            font-size: 20px;
+            margin: 0;
+            font-style: italic;
+            color: #b2ebf2;
+        }
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #00796b;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            resize: vertical;
+        }
+        button {
+            background-color: #00796b;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .like {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #888;
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+        }
+        .like.liked {
+            color: #e91e63;
+        }
+        .feedback-box {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Success – Nerelya</h1>
+    <p>Exprime une réussite, inspire les autres, gagne du sens</p>
+</header>
+
+<main>
+    <section>
+        <h2>🟢 Description détaillée</h2>
+        <p>
+            La section « Success » te permet de publier une réussite de ta journée : une progression, un exploit ou une action dont tu es fier.
+            Ta communauté peut réagir : encourager, valider ou même s’engager à reproduire ton action. En retour, tu gagnes des points de réputation.
+            Ce système favorise la reconnaissance positive et l’inspiration mutuelle. Chaque action a un impact.
+        </p>
+    </section>
+
+    <section class="feedback-box">
+        <h2>💬 Avis / Proposition</h2>
+        <label for="avis">Tu as une idée pour améliorer cette section ?</label>
+        <textarea id="avis" placeholder="Propose une amélioration, une réaction ou un avis..."></textarea>
+        <button onclick="envoyerFeedback()">Envoyer</button>
+        <button class="like" onclick="toggleLike(this)">♡</button>
+    </section>
+</main>
+
+<script>
+    function envoyerFeedback() {
+        const texte = document.getElementById('avis').value;
+        if (texte.trim()) {
+            alert("Merci pour votre avis :\\n" + texte);
+            document.getElementById('avis').value = "";
+        } else {
+            alert("Merci de saisir un avis avant d'envoyer.");
+        }
+    }
+
+    function toggleLike(button) {
+        button.classList.toggle("liked");
+        button.innerHTML = button.classList.contains("liked") ? "❤" : "♡";
+    }
+</script>
+</body>
+</html>
