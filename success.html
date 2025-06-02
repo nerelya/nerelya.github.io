@@ -55,22 +55,6 @@
             border-radius: 5px;
             cursor: pointer;
         }
-        .like {
-            background: none;
-            border: none;
-            font-size: 24px;
-            cursor: pointer;
-            color: #888;
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-        }
-        .like.liked {
-            color: #e91e63;
-        }
-        .feedback-box {
-            position: relative;
-        }
     </style>
 </head>
 <body>
@@ -89,12 +73,11 @@
         </p>
     </section>
 
-    <section class="feedback-box">
+    <section>
         <h2>💬 Avis / Proposition</h2>
         <label for="avis">Tu as une idée pour améliorer cette section ?</label>
         <textarea id="avis" placeholder="Propose une amélioration, une réaction ou un avis..."></textarea>
         <button onclick="envoyerFeedback()">Envoyer</button>
-        <button class="like" onclick="toggleLike(this)">♡</button>
     </section>
 </main>
 
@@ -102,13 +85,13 @@
     function envoyerFeedback() {
         const texte = document.getElementById('avis').value;
         if (texte.trim()) {
-            alert("Merci pour votre avis :\\n" + texte);
+            alert("Merci pour votre avis :\n" + texte);
             document.getElementById('avis').value = "";
         } else {
             alert("Merci de saisir un avis avant d'envoyer.");
         }
     }
-    }
 </script>
 </body>
 </html>
+
