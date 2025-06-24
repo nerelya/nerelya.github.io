@@ -108,9 +108,35 @@ header {
         
     </div>
 </section>
+<div style="position: fixed; bottom: 20px; right: 20px; background-color: white; border-radius: 50px; padding: 12px 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); display: flex; align-items: center; z-index: 1000;">
+    <button id="globalLike" style="background: none; border: none; font-size: 24px; color: #999; cursor: pointer;">♡</button>
+    <span id="globalLikeCount" style="margin-left: 10px; font-size: 16px; color: #333;">0</span>
+</div>
 
-  }
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const btn = document.getElementById("globalLike");
+    const count = document.getElementById("globalLikeCount");
+
+    const liked = localStorage.getItem("global_like") === "true";
+    const value = parseInt(localStorage.getItem("global_like_count")) || 0;
+
+    if (liked) btn.style.color = "#e91e63";
+    count.textContent = value;
+
+    btn.addEventListener("click", () => {
+        const isLiked = !(localStorage.getItem("global_like") === "true");
+        const newValue = isLiked ? value + 1 : value - 1;
+        localStorage.setItem("global_like", isLiked);
+        localStorage.setItem("global_like_count", newValue);
+        btn.style.color = isLiked ? "#e91e63" : "#999";
+        count.textContent = newValue;
+    });
+});
 </script>
 
+<footer style="text-align: center; padding: 30px; font-size: 13px; background-color: #fff4f4; color: #7b1c1c; border-top: 1px solid #e57373; margin-top: 60px;">
+    <p><strong>Protection légale :</strong> Ce projet est une création originale protégée par dépôt officiel (INPI – enveloppe Soleau n° DSO2025010873). Le nom actuel est temporaire. Toute tentative de reproduction, d'appropriation ou de vol d'idée fera l’objet de poursuites judiciaires sans préavis.</p>
+</footer>
 </body>
 </html>
